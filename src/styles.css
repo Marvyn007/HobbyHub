@@ -1,0 +1,259 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.navbar {
+  background-color: #26a69a;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar h1 {
+  color: white;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.navbar a {
+  background-color: white;
+  color: #26a69a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #e0f2f1;
+}
+
+.post-card {
+  width: 100%;              /* Let it stretch to container width */
+  max-width: 900px;         /* Limit max size so it’s not too wide */
+  margin: 20px auto;        /* Center it horizontally */
+  padding: 20px;            /* Add breathing room */
+  box-sizing: border-box;   /* Include padding in width */
+}
+/* .post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+} */
+
+
+.post-card h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.post-card p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-container textarea {
+  height: 100px;
+}
+
+.form-container button {
+  background-color: #26a69a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #1e7e75;
+}
+
+.post-page {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.post-page h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.post-page p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.post-page img {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.button-group button,
+.button-group a {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-group .upvote {
+  background-color: #4caf50;
+  color: white;
+}
+
+.button-group .upvote:hover {
+  background-color: #388e3c;
+}
+
+.button-group .edit {
+  background-color: #ffca28;
+  color: white;
+}
+
+.button-group .edit:hover {
+  background-color: #f57f17;
+}
+
+.button-group .delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.button-group .delete:hover {
+  background-color: #d32f2f;
+}
+
+.comment-section h2 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.comment {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.comment p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.search-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.search-sort input,
+.search-sort select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-sort input {
+  flex: 1;
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .navbar-content {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  .search-sort {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-sort input,
+  .search-sort select {
+    width: 100%;
+  }
+  .post-card,
+  .form-container,
+  .post-page {
+    margin: 10px 0;
+  }
+}
